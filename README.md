@@ -19,6 +19,6 @@ Collection of Python Projects built while learning programming fundamentals.
 
 ## Learning Outcomes 
 Most projects were created while following FreeCodeCamp's Python practice exercises, allowing me to apply concepts like 
--functions,
--loops,
--file handling and OOP.
+functions,
+loops,
+file handling and OOP.
