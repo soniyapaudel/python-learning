@@ -53,3 +53,19 @@ class Employee:
     @property
     def salary(self):
         return self._salary
+
+    @salary.setter
+    def salary(self, new_salary):
+        if not isinstance(new_salary, (int, float)):
+            raise TypeError("'salary' must be a number.")
+        if new_salary <= Employee._base_salaries[self.level]:
+            raise ValueError(
+                f'Salary must be higher than minimum salary ${Employee._base_salaries[self.level]}.')
+        self._salary = new_salary
+        print(f'Salary updated to ${self.salary}.')
+
+
+charlie_brown = Employee('Charlie Brown', 'trainee')
+print(charlie_brown)
+print(f'Base salary: ${charlie_brown.salary}')
+charlie_brown.level = 'junior'
